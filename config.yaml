@@ -1,0 +1,25 @@
+videofile_path: /tmp/file/video/
+logfile_path: /tmp/file/log/
+picfile_path: /tmp/file/picture/
+level: info
+# 设置文件存储路径
+mysql:  
+  host: 192.168.0.101
+  port: 3306
+  database: Minitok
+  username: user
+  password: 123
+minio:
+  #minio服务主机ip，需要填具体ip,这里填写的是本人内网测试时的ip地址
+  host: 192.168.0.101
+  port: 9000
+  accessKeyID: minioadmin
+  secretAccessKey: minioadmin
+  videobuckets: video
+  picbuckets: pic
+redis:
+  address: 192.168.0.101
+  network: tcp
+  port: 6379
+  auth: 123
+
