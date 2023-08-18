@@ -3,6 +3,7 @@ package main
 import (
 	"minitok/config"
 	"minitok/log"
+	"minitok/routes"
 	"minitok/storage"
 	"minitok/usal"
 
@@ -22,5 +23,6 @@ func main() {
 	defer usal.CloseDataBase() //defer 数据库的关闭
 	defer usal.CloseRedis()    //redis数据库的关闭
 	rou := gin.Default()       //获得gin的Engine
+	rou = routes.SetRoute(rou)
 	rou.Run()
 }
